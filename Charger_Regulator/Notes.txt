@@ -1,0 +1,6 @@
+Regulators on Newark:
+http://www.newark.com/Search?catalogId=15003&langId=-1&storeId=10194&gs=true&st=SC4503
+http://www.newark.com/webapp/wcs/stores/servlet/Search?catalogId=15003&langId=-1&storeId=10194&gs=true&st=TPS63061
+
+Charger on Newark:
+http://www.newark.com/webapp/wcs/stores/servlet/Search?st=mcp73833&catalogId=15003&categoryId=800000004574&langId=-1&storeId=10194

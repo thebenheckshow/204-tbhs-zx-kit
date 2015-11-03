@@ -1,0 +1,45 @@
+PROBLEM: MREQ net labeled "MREQL" on CPU/ULA but "MREQ" on OR gate.
+RESULT: Missing connection between CPU and OR gate on board casuing upper RAM conflict
+SOLUTION: Bridge MREQ from CPU to OR gate.
+
+PROBLEM: IORQ on CPU not connected to anything.
+RESULT: Can't read keyboard from ULA (and would cause other issues too)
+SOLUTION: Added a 470 ohm resister and wire between CPU's IOREQ and ULA's IOREQ (rest of circuit was placed correctly just missed this connection)
+
+PROBLEM: INTL on ULA not connected to anything.
+RESULT: System doesn't work
+SOLUTION: Added a 470 ohm resister and wire between CPU's INT and ULA's INT
+
+PROBLEM: Jumbled text on screen as a result of address bus conflict
+SOLUTION: Between the MUX and ULA, use 680 ohm resisters instead of 330 (470 may work as well)
+
+PROBLEM: ROM CE not connected to anything
+RESULT: ROM doesn't work right.
+SOLUTION:
+OR the CPU's MREQ and the ULA's ROM_CS (through 600 ohm resistor) together, send result to ROM CE
+Connect ROM_OE to CPU's READ instead of ROM_CS (move the resistor) 
+
+
+
+
+NEED TO CHECK TAPE LOADING NEXT!
+
+
+
+
+NEED TO ADD / CHANGE:
+
+DONE - Remove 2k pullup on CASS/SPEAKER line to enable modern "tape" loading
+
+DONE - Move (2) 10k resisters out from under ULA!
+
+DONE - 15pf cap on ground side of 14MHz crystal
+
+DONE - 1/2 watt 15 ohm thick film resistor for ULA VCC SMD case style 1210
+
+DONE - 10uf ELEC cap on reset button for system start
+
+DONE - ELEC CAP on lower 5v rail for speaker compensation
+
+
+
